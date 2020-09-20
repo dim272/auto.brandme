@@ -92,7 +92,7 @@
     margin-bottom: 9px;
     position: relative; }
     .contacts__phoneNumber::before {
-      content: url("/../img/phone.png");
+      content: url("./../img/phone.png");
       width: 12px;
       height: 16px;
       position: absolute;
