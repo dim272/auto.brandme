@@ -1,0 +1,695 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  letter-spacing: 1.5px; }
+
+.main {
+  width: 1440px;
+  margin: 0 auto; }
+
+.header {
+  height: 50px;
+  width: 1168px;
+  margin: 57px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo {
+  position: relative; }
+  .logo__image {
+    position: absolute;
+    height: 47px;
+    width: 73px;
+    top: -10px; }
+  .logo__text {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 16px;
+    letter-spacing: 0.4px; }
+
+.menu {
+  width: 365px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent; }
+  .menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+  .menu__item {
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin-right: 30px; }
+  .menu__link {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #000;
+    letter-spacing: 0.4px; }
+    .menu__link--else::after {
+      content: "";
+      border: solid black;
+      border-width: 0 1px 1px 0;
+      display: inline-block;
+      margin-left: 8px;
+      margin-bottom: 2px;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg); }
+
+.contacts {
+  width: 378px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .contacts__part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; }
+    .contacts__part--border {
+      height: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.05); }
+  .contacts__phoneNumber {
+    margin-bottom: 9px;
+    position: relative; }
+    .contacts__phoneNumber::before {
+      content: url("./../../img/phone.png");
+      width: 12px;
+      height: 16px;
+      position: absolute;
+      top: 2px;
+      left: -24px; }
+    .contacts__phoneNumber > a {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 21px;
+      letter-spacing: 0em;
+      text-align: left;
+      letter-spacing: 0.2px; }
+  .contacts__text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    letter-spacing: 0.2px;
+    position: relative; }
+    .contacts__text--border::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: 18px;
+      left: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+
+.socialBlock {
+  width: 106px;
+  height: 22px;
+  margin-top: 9px;
+  margin-right: auto; }
+  .socialBlock__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .socialBlock__icon {
+    width: 22px;
+    height: 22px; }
+
+.content {
+  width: 1241px;
+  margin: 0 auto;
+  position: relative; }
+  .content--flexColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .content__h1 {
+    width: 868px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: left;
+    letter-spacing: 0.8px; }
+  .content__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .content__wrap--column {
+      flex-direction: column; }
+    .content__wrap--width568 {
+      width: 568px; }
+    .content__wrap--flexstart {
+      justify-content: flex-start;
+      align-items: flex-start; }
+  .content__text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    letter-spacing: 0.7px;
+    margin: 50px 0; }
+  .content__image {
+    position: absolute;
+    width: 646px;
+    height: 499px;
+    left: 602px;
+    top: -17px; }
+
+.contactUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; }
+  .contactUs__part {
+    width: 200px;
+    height: 60px;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+  .contactUs__smalltext {
+    position: absolute;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    top: -15px; }
+  .contactUs__text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left; }
+    .contactUs__text--telegram {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .contactUs__text--telegram::before {
+        content: url("../../img/social_icons/Telegram.png");
+        margin-right: 10px;
+        margin-top: 2px; }
+  .contactUs__button {
+    width: 170px;
+    height: 60px;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    background-color: #62D15F;
+    border: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    border-radius: 0px 5px 5px 0px; }
+
+.profit {
+  width: 100%; }
+  .profit__wrap {
+    width: 1170px;
+    margin: 166px auto 65px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .profit__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 270px;
+    height: 130px; }
+    .profit__card--big {
+      width: 370px;
+      height: 212px;
+      margin-bottom: 100px; }
+  .profit__icon {
+    height: 70px;
+    width: 70px;
+    border-radius: 20px;
+    margin-bottom: 20px; }
+    .profit__icon--green {
+      background: linear-gradient(to bottom right, #92D375 0%, #66CC99 100%); }
+    .profit__icon--purple {
+      background: linear-gradient(to top left, #7E57C2 0%, #AC82F5 100%); }
+    .profit__icon--orange {
+      background: linear-gradient(to bottom right, #E9C763 0%, #DC8840 100%); }
+    .profit__icon--blue {
+      background: linear-gradient(to bottom right, #7090F5 0%, #504FF6 100%); }
+  .profit__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: center; }
+  .profit__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    margin-top: 20px; }
+
+.services {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(104.3deg, #F5F9FF 2.89%, #FFFFFF 51.15%, #F5F9FF 100%); }
+  .services__wrap {
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .services__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    margin: 54px auto 60px auto; }
+  .services__block {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 332px; }
+  .services__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.03);
+    border-radius: 5px; }
+  .services__header {
+    width: 100%;
+    height: 118px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+  .services__text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 260px; }
+  .services__text--big {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-left: 35px;
+    margin-right: 15px; }
+  .services__text--small {
+    width: 111px;
+    font-size: 12px;
+    line-height: 18px;
+    padding-right: 35px; }
+  .services__body {
+    padding: 35px 32.5px 6px 32.5px; }
+  .services__string {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 29px; }
+  .services__icon {
+    margin-right: 20px;
+    height: 22px;
+    width: 22px; }
+
+.segment {
+  position: absolute;
+  bottom: 100px;
+  width: 1170px;
+  height: 147px;
+  margin: 0 auto 100px auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.03);
+  border-radius: 5px; }
+  .segment__left {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .segment__right {
+    width: 427px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .segment__left--column {
+    flex: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 120px;
+    margin-right: 89px; }
+  .segment__text {
+    letter-spacing: 0.4px;
+    font-size: 14px;
+    line-height: 22px; }
+    .segment__text--width {
+      width: 261px; }
+  .segment__text--orange {
+    text-align: left;
+    font-size: 14px;
+    color: #DC8840; }
+  .segment__text--big {
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 29px;
+    letter-spacing: 0px; }
+  .segment__text--green {
+    font-weight: bold;
+    color: #62D15F; }
+  .segment__form {
+    position: relative;
+    letter-spacing: 0.5px;
+    margin-left: 30px; }
+    .segment__form::before {
+      position: absolute;
+      content: 'Номер телефона';
+      top: -8px; }
+  .segment__tel {
+    width: 246px;
+    height: 60px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+  .segment__btn {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 700;
+    width: 181px;
+    height: 60px;
+    background: #62D15F;
+    border-radius: 0px 5px 5px 0px;
+    border: none; }
+
+.stock {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #F5F9FF; }
+  .stock__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.3px;
+    text-align: center; }
+  .stock__subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    letter-spacing: 0.3px; }
+  .stock__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .stock__wrap {
+    position: relative; }
+  .stock__input {
+    width: 440px;
+    height: 70px;
+    background: #FFFFFF;
+    border: 1px solid #E6E8F6;
+    box-sizing: border-box;
+    border-radius: 7px;
+    outline: none;
+    padding-left: 20px;
+    font-size: 17px;
+    color: #979EA5; }
+    .stock__input--short {
+      padding-right: 85px; }
+  .stock__button {
+    position: absolute;
+    width: 73px;
+    height: 60px;
+    background: linear-gradient(124.04deg, #92D375 0%, #62D15F 100%);
+    border-radius: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none; }
+  .stock__arrow {
+    position: absolute;
+    top: 29px;
+    left: 28px;
+    border-bottom: 2px solid white;
+    width: 18px; }
+    .stock__arrow::before {
+      content: '';
+      position: absolute;
+      width: 9px;
+      height: 2px;
+      background-color: white;
+      transform: rotate(-45deg);
+      transform-origin: 100% 0%; }
+    .stock__arrow::after {
+      content: '';
+      position: absolute;
+      width: 9px;
+      height: 2px;
+      background-color: white;
+      transform: rotate(45deg);
+      transform-origin: 100% 0%; }
+
+.forWhom {
+  width: 100%;
+  height: 843px; }
+  .forWhom__wrap {
+    width: 1174px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .forWhom__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    margin-top: 100px;
+    margin-bottom: 60px; }
+  .forWhom__block {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+  .forWhom__card {
+    width: 572px;
+    height: 539px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    padding-left: 50px;
+    background: #FFFFFF;
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.03);
+    border-radius: 5px; }
+    .forWhom__card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 8.29px;
+      height: 100%;
+      background: #62D15F;
+      border-radius: 5px 0px 0px 0px; }
+  .forWhom__subtitle {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: left;
+    width: 445px;
+    letter-spacing: 0.3px;
+    margin-top: 49px;
+    margin-bottom: 38px; }
+  .forWhom__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    width: 472px; }
+
+.map {
+  width: 100%;
+  height: 1119px;
+  position: relative;
+  border: 1px solid transparent; }
+  .map__wrap {
+    background-image: url("./../img/map.png");
+    margin: 100px auto 200px;
+    width: 1440px;
+    height: 819px;
+    position: relative; }
+  .map__cards {
+    position: absolute;
+    width: 465px;
+    height: 759px;
+    left: 140px;
+    top: 30px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; }
+  .map__card {
+    width: 465px;
+    height: 253px;
+    padding-top: 39px;
+    padding-left: 40px; }
+    .map__card--active {
+      box-shadow: -5px 0px 0px #62D15F; }
+  .map__city {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px; }
+  .map__address {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0;
+    margin-top: 5px; }
+  .map__contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px; }
+  .map__contact {
+    color: #7C7D8D;
+    padding-left: 44px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 0px;
+    position: relative; }
+    .map__contact--viber::before {
+      content: url("./../../img/social_icons/Viber.png");
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      left: 0;
+      top: 5px; }
+    .map__contact--whatsapp::before {
+      content: url("./../../img/social_icons/Whatsapp.png");
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      left: 0;
+      top: 5px; }
+    .map__contact--email {
+      color: #004BFA; }
+      .map__contact--email::before {
+        content: url("./../../img/social_icons/Email.png");
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        left: 0;
+        top: 5px; }
+
+.callBack {
+  width: 1143px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+  .callBack__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .callBack__content {
+    margin-top: 10px; }
+  .callBack__image {
+    width: 281px;
+    height: 264px; }
+  .callBack__title {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0px; }
+  .callBack__uptitle {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px; }
+
+.footer {
+  width: 100%;
+  height: 138px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05); }
+  .footer__wrap {
+    width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .footer__part {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .footer__item {
+    margin-top: 39px; }
+  .footer__text {
+    margin-top: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0px; }
