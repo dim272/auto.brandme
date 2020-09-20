@@ -129,7 +129,7 @@ $font-Montserrat: 'Montserrat', sans-serif;
     margin-bottom: 9px;
     position: relative;
     &::before {
-      content: url("./../../img/phone.png");
+      content: url("/../img/phone.png");
       width: 12px;
       height: 16px;
       position: absolute;
@@ -633,13 +633,13 @@ $font-Montserrat: 'Montserrat', sans-serif;
     position: absolute;
     top: 29px;
     left: 28px;
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
     width: 18px;
 
       &::before {
         content: '';
         position: absolute;
-        width: 9px;
+        width: 8px;
         height: 2px;
         background-color: white;
         transform: rotate(-45deg);
@@ -649,7 +649,7 @@ $font-Montserrat: 'Montserrat', sans-serif;
       &::after {
         content: '';
         position: absolute;
-        width: 9px;
+        width: 8px;
         height: 2px;
         background-color: white;
         transform: rotate(45deg);
@@ -791,7 +791,7 @@ $font-Montserrat: 'Montserrat', sans-serif;
     position: relative;
     &--viber {
       &::before {
-        content: url("./../../img/social_icons/Viber.png");
+        content: url("/../img/social_icons/Viber.png");
         width: 22px;
         height: 22px;
         position: absolute;
@@ -802,7 +802,7 @@ $font-Montserrat: 'Montserrat', sans-serif;
 
     &--whatsapp {
       &::before {
-        content: url("./../../img/social_icons/Whatsapp.png");
+        content: url("/../img/social_icons/Whatsapp.png");
         width: 22px;
         height: 22px;
         position: absolute;
@@ -813,7 +813,7 @@ $font-Montserrat: 'Montserrat', sans-serif;
 
     &--email {
       &::before {
-        content: url("./../../img/social_icons/Email.png");
+        content: url("/../img/social_icons/Email.png");
         width: 22px;
         height: 22px;
         position: absolute;
