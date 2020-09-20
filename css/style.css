@@ -220,7 +220,7 @@
       justify-content: center;
       align-items: center; }
       .contactUs__text--telegram::before {
-        content: url("../../img/social_icons/Telegram.png");
+        content: url("./../img/social_icons/Telegram.png");
         margin-right: 10px;
         margin-top: 2px; }
   .contactUs__button {

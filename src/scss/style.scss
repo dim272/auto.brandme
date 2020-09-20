@@ -280,7 +280,7 @@ $font-Montserrat: 'Montserrat', sans-serif;
   	  &--telegram{
       @include flex-center;
         &::before {
-          content: url("../../img/social_icons/Telegram.png");
+          content: url("./../img/social_icons/Telegram.png");
           margin-right: 10px;
           margin-top: 2px;
       	}
