@@ -6,6 +6,7 @@ $green-color: #62D15F;
 $orange-color: #DC8840;
 $blue-color: #004BFA;
 
+$mob: 425px;
 
 @mixin flex-center {
   display: flex;
@@ -29,11 +30,6 @@ $font-Montserrat: 'Montserrat', sans-serif;
   letter-spacing: 1.5px;
 }
 
-.main {
- width: 1440px;
- margin: 0 auto;
-}
-
 .header {
   height: 50px;
   width: 1168px;
@@ -41,9 +37,13 @@ $font-Montserrat: 'Montserrat', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-	&__item {
-    // margin-right: 74px;
-	}
+    @media(max-width: $mob) {
+          width: 100%;
+          margin: 20px auto;
+          height: inherit;
+          flex-direction: column;
+          justify-content: center;
+    }
 }
 
 .logo {
@@ -57,12 +57,11 @@ $font-Montserrat: 'Montserrat', sans-serif;
 	&__text {
     font-family: $font-Roboto;
     font-size: 24px;
-    font-style: normal;
     font-weight: 700;
     line-height: 28px;
     text-align: left;
     text-transform: uppercase;
-    margin-left: 16px;
+    margin-left: 15.5px;
     letter-spacing: 0.4px;
 	}
 
@@ -74,15 +73,30 @@ $font-Montserrat: 'Montserrat', sans-serif;
   justify-content: space-between;
   align-items: center;
   border: 1px solid transparent;
+  @media(max-width: $mob) {
+    margin: 40px auto;
+    }
 	&__list {
     @include flex-center;
     width: 100%;
+    @media(max-width: $mob) {
+          justify-content: center;
+          align-items: center;
+        }
+      &--footer {
+        @media(max-width: $mob) {
+          flex-direction: column;
+        }
+      }
 	}
 
 	&__item {
     flex-grow: 1;
     flex-shrink: 0;
     margin-right: 30px;
+    @media(max-width: $mob) {
+      margin-right: 0;
+      }
 	}
 
 	&__link {
@@ -114,6 +128,9 @@ $font-Montserrat: 'Montserrat', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media(max-width: $mob) {
+        width: 80%;
+    }
 	&__part {
     display: flex;
     flex-direction: column;
@@ -196,6 +213,10 @@ $font-Montserrat: 'Montserrat', sans-serif;
   width: 1241px;
   margin: 0 auto;
   position: relative;
+    @media(max-width: $mob) {
+      width: 100%;
+      margin: 80px auto 0;
+    }
   &--flexColumn{
     @include flex-center
     flex-direction: column;
@@ -204,22 +225,39 @@ $font-Montserrat: 'Montserrat', sans-serif;
     width: 868px;
     font-family: $font-Montserrat;
     font-size: 52px;
-    font-style: normal;
     font-weight: 700;
     line-height: 63px;
     letter-spacing: 0em;
     text-align: left;
     letter-spacing: 0.8px;
+    @media(max-width: $mob) {
+      width: 90%;
+      font-size: 28px;
+      line-height: 40px;
+      letter-spacing: 0px;
+      margin: 20px auto;
+    }
 	}
 
 	&__wrap {
     @include flex-center
     position: relative;
+      @media(max-width: $mob) {
+        flex-direction: column;
+      }
     &--column{
       flex-direction: column;
+      @media(max-width: $mob) {
+        width: 100%;
+
+      }
     }
     &--width568 {
       width: 568px;
+      @media(max-width: $mob) {
+        width: 100%;
+        flex-direction: column;
+      }
     }
     &--flexstart {
       justify-content: flex-start;
@@ -230,13 +268,19 @@ $font-Montserrat: 'Montserrat', sans-serif;
 	&__text {
     font-family: $font-Montserrat;
     font-size: 18px;
-    font-style: normal;
     font-weight: 500;
     line-height: 36px;
     letter-spacing: 0em;
     text-align: left;
     letter-spacing: 0.7px;
     margin: 50px 0;
+    @media(max-width: $mob) {
+      width: 90%;
+      font-size: 14px;
+      line-height: 40px;
+      letter-spacing: 0px;
+      margin: 20px auto;
+    }
 	}
 
 	&__image {
@@ -245,6 +289,12 @@ $font-Montserrat: 'Montserrat', sans-serif;
     height: 499px;
     left: 602px;
     top: -17px;
+      @media(max-width: $mob) {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin: 0;
+      }
 
 	}
 }
@@ -252,6 +302,12 @@ $font-Montserrat: 'Montserrat', sans-serif;
 .contactUs {
   @include flex-center;
   height: 80px;
+  @media(max-width: $mob) {
+    width: 80%;
+    height: inherit;
+    margin: 50px auto 0;
+    flex-direction: column;
+  }
 
   &__part {
     width: 200px;
@@ -259,6 +315,10 @@ $font-Montserrat: 'Montserrat', sans-serif;
     background-color: $gray-color;
     @include flex-center;
     position: relative;
+    @media(max-width: $mob) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &__smalltext {
     position: absolute;
@@ -312,6 +372,12 @@ $font-Montserrat: 'Montserrat', sans-serif;
     width: 1170px;
     margin: 166px auto 65px auto;
     @include flex-center
+    @media(max-width: $mob) {
+      width: 80%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
   }
 	&__card {
     display: flex;
@@ -320,6 +386,10 @@ $font-Montserrat: 'Montserrat', sans-serif;
     align-items: center;
     width: 270px;
     height: 130px;
+    @media(max-width: $mob) {
+      width: 40%;
+      height: auto;
+    }
     &--big {
       width: 370px;
       height: 212px;
@@ -387,14 +457,15 @@ $font-Montserrat: 'Montserrat', sans-serif;
     margin: 0 auto;
     @include flex-center
     flex-direction: column;
+    @media(max-width: $mob) {
+      width: 100%;
+    }
   }
 	&__title {
     font-family: $font-Montserrat;
     font-size: 36px;
-    font-style: normal;
     font-weight: 700;
     line-height: 44px;
-    letter-spacing: 0em;
     margin: 54px auto 60px auto;
 	}
 
@@ -403,6 +474,11 @@ $font-Montserrat: 'Montserrat', sans-serif;
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 332px;
+    @media(max-width: $mob) {
+      width: 100%;
+      margin: 0;
+      flex-wrap: wrap;
+    }
 	}
 
 	&__card {
@@ -414,6 +490,9 @@ $font-Montserrat: 'Montserrat', sans-serif;
     background: #FFFFFF;
     box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.03);
     border-radius: 5px;
+    @media(max-width: $mob) {
+      margin: 15px auto;
+    }
 	}
 
 	&__header {
@@ -481,17 +560,33 @@ $font-Montserrat: 'Montserrat', sans-serif;
   background-color: $white-color;
   box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.03);
   border-radius: 5px;
+  @media(max-width: $mob) {
+    width: 100%;
+    height: auto;
+    position: static;
+    flex-direction: column;
+  }
 
   &__left {
     flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media(max-width: $mob) {
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
   }
 	&__right {
     width: 427px;
     flex: 1;
     @include flex-center
+    @media(max-width: $mob) {
+      width: 90%;
+      margin-top: 20px;
+    }
 	}
 
 	&__left--column {
@@ -501,6 +596,11 @@ $font-Montserrat: 'Montserrat', sans-serif;
     align-items: flex-start;
     margin-left: 120px;
     margin-right: 89px;
+    @media(max-width: $mob) {
+      align-items: center;
+      margin: 0;
+    }
+
 	}
 
 	&__text {
@@ -509,6 +609,14 @@ $font-Montserrat: 'Montserrat', sans-serif;
     line-height: 22px;
     &--width {
       width: 261px;
+      @media(max-width: $mob) {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+    @media(max-width: $mob) {
+      font-size: 14px;
     }
 	}
 
@@ -516,6 +624,9 @@ $font-Montserrat: 'Montserrat', sans-serif;
     text-align: left;
     font-size: 14px;
     color: $orange-color;
+    @media(max-width: $mob) {
+      font-size: 14px;
+    }
 	}
 
 	&__text--big {
@@ -523,6 +634,10 @@ $font-Montserrat: 'Montserrat', sans-serif;
     font-size: 23px;
     line-height: 29px;
     letter-spacing: 0px;
+    @media(max-width: $mob) {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
 	}
 
 	&__text--green {
@@ -538,6 +653,13 @@ $font-Montserrat: 'Montserrat', sans-serif;
       position: absolute;
       content: 'Номер телефона';
       top: -8px;
+      @media(max-width: $mob) {
+        left: 0;
+      }
+    }
+    @media(max-width: $mob) {
+      width: 100%;
+      @include flex-center
     }
 	}
 
@@ -574,6 +696,11 @@ $font-Montserrat: 'Montserrat', sans-serif;
   @include flex-center
   flex-direction: column;
   background: #F5F9FF;
+  @media(max-width: $mob) {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+  }
 
 	&__title {
     font-size: 36px;
@@ -581,6 +708,11 @@ $font-Montserrat: 'Montserrat', sans-serif;
     line-height: 44px;
     letter-spacing: 0.3px;
     text-align: center;
+    @media(max-width: $mob) {
+      width: 95%;
+      font-size: 30px;
+      margin-top: 40px;
+    }
 	}
 
 	&__subtitle {
@@ -596,10 +728,16 @@ $font-Montserrat: 'Montserrat', sans-serif;
 	&__form {
     @include flex-center
     flex-direction: column;
+    @media(max-width: $mob) {
+      width: 90%;
+    }
 	}
 
   &__wrap{
     position: relative;
+    @media(max-width: $mob) {
+      width: 100%;
+    }
   }
 
   &__input {
@@ -613,8 +751,14 @@ $font-Montserrat: 'Montserrat', sans-serif;
     padding-left: 20px;
     font-size: 17px;
     color: #979EA5;
+      @media(max-width: $mob) {
+        width: 100%;
+      }
     &--short {
-      padding-right: 85px;
+      padding-right: 100px;
+      @media(max-width: $mob) {
+        padding-right: 90px;
+      }
     }
 
   }
@@ -661,12 +805,18 @@ $font-Montserrat: 'Montserrat', sans-serif;
 .forWhom {
   width: 100%;
   height: 843px;
+  @media(max-width: $mob) {
+    height: auto;
+  }
 
   &__wrap {
     width: 1174px;
     margin: 0 auto;
     @include flex-center
     flex-direction: column;
+    @media(max-width: $mob) {
+      width: 100%;
+    }
   }
 
 
@@ -676,12 +826,19 @@ $font-Montserrat: 'Montserrat', sans-serif;
     line-height: 44px;
     margin-top: 100px;
     margin-bottom: 60px;
+    @media(max-width: $mob) {
+      text-align: center;
+    }
   }
 
   &__block {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media(max-width: $mob) {
+      width: 100%;
+      flex-wrap: wrap;
+    }
   }
 
   &__card {
@@ -695,6 +852,10 @@ $font-Montserrat: 'Montserrat', sans-serif;
     background: #FFFFFF;
     box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.03);
     border-radius: 5px;
+    @media(max-width: $mob) {
+      width: 100%;
+      padding: 0;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -703,6 +864,11 @@ $font-Montserrat: 'Montserrat', sans-serif;
       height: 100%;
       background: #62D15F;
       border-radius: 5px 0px 0px 0px;
+      @media(max-width: $mob) {
+        width: 100vw;
+        height: 8.29px;
+        top: 0;
+      }
     }
   }
 
@@ -715,6 +881,11 @@ $font-Montserrat: 'Montserrat', sans-serif;
     letter-spacing: 0.3px;
     margin-top: 49px;
     margin-bottom: 38px;
+    @media(max-width: $mob) {
+      width: 90%;
+      font-size: 20px;
+      margin: 20px;
+    }
   }
 
   &__text {
@@ -723,6 +894,11 @@ $font-Montserrat: 'Montserrat', sans-serif;
     line-height: 30px;
     letter-spacing: 0.3px;
     width: 472px;
+    @media(max-width: $mob) {
+      width: 90%;
+      font-size: 15px;
+      margin: 20px;
+    }
   }
 
 }
@@ -732,12 +908,19 @@ $font-Montserrat: 'Montserrat', sans-serif;
   height: 1119px;
   position: relative;
   border: 1px solid transparent;
+  @media(max-width: $mob) {
+    width: 423px;
+  }
+
   &__wrap {
     background-image: url("./../img/map.png");
     margin: 100px auto 200px;
     width: 1440px;
     height: 819px;
     position: relative;
+    @media(max-width: $mob) {
+      width: 100%;
+    }
   }
 
   &__cards {
@@ -749,6 +932,11 @@ $font-Montserrat: 'Montserrat', sans-serif;
     background-color: $white-color;
     display: flex;
     flex-direction: column;
+    @media(max-width: $mob) {
+      width: 50%;
+      height: auto;
+      left: 20px;
+    }
   }
 
   &__card {
@@ -756,6 +944,11 @@ $font-Montserrat: 'Montserrat', sans-serif;
     height: 253px;
     padding-top: 39px;
     padding-left: 40px;
+    @media(max-width: $mob) {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+    }
     &--active {
       box-shadow: -5px 0px 0px #62D15F;
     }
@@ -765,6 +958,9 @@ $font-Montserrat: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
+    @media(max-width: $mob) {
+      font-size: 16px;
+    }
   }
 
   &__address {
@@ -773,6 +969,10 @@ $font-Montserrat: 'Montserrat', sans-serif;
     line-height: 22px;
     letter-spacing: 0;
     margin-top: 5px;
+    @media(max-width: $mob) {
+      font-size: 12px;
+      width: 80%;
+    }
   }
 
   &__contacts {
@@ -789,6 +989,10 @@ $font-Montserrat: 'Montserrat', sans-serif;
     line-height: 37px;
     letter-spacing: 0px;
     position: relative;
+    @media(max-width: $mob) {
+      font-size: 13px;
+      padding-left: 32px;
+    }
     &--viber {
       &::before {
         content: url("./../img/social_icons/Viber.png");
@@ -830,19 +1034,36 @@ $font-Montserrat: 'Montserrat', sans-serif;
   position: absolute;
   margin: auto;
   left: 0; bottom: 0; right: 0;
+  @media(max-width: $mob) {
+    width: 100%;
+    height: auto;
+  }
 	&__wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media(max-width: $mob) {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 	}
 
 	&__content {
     margin-top: 10px;
+    @media(max-width: $mob) {
+      width: 40%;
+      margin-top: 90px;
+    }
 	}
 
   &__image {
     width: 281px;
     height: 264px;
+    @media(max-width: $mob) {
+      width: 50%;
+      height: auto;
+    }
   }
 
   &__title {
@@ -850,6 +1071,9 @@ $font-Montserrat: 'Montserrat', sans-serif;
     font-weight: 500;
     line-height: 29px;
     letter-spacing: 0px;
+    @media(max-width: $mob) {
+      font-size: 18px;
+    }
   }
 
 	&__uptitle {
@@ -857,7 +1081,17 @@ $font-Montserrat: 'Montserrat', sans-serif;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0px;
+    @media(max-width: $mob) {
+      font-size: 12px;
+    }
 	}
+
+  &__form {
+    @media(max-width: $mob) {
+      width: 90%;
+      margin-top: 25px;
+    }
+  }
 
 }
 
@@ -865,12 +1099,18 @@ $font-Montserrat: 'Montserrat', sans-serif;
   width: 100%;
   height: 138px;
   border-top: 1px solid $opacity-color;
+  @media(max-width: $mob) {
+    height: auto;
+  }
 
   &__wrap {
     width: 1120px;
     margin: 0 auto;
     @include flex-center
     flex-direction: column;
+    @media(max-width: $mob) {
+      width: 100%;
+    }
   }
 
 	&__part {
@@ -878,10 +1118,17 @@ $font-Montserrat: 'Montserrat', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media(max-width: $mob) {
+      width: 100%;
+      flex-direction: column;
+    }
 	}
 
 	&__item {
     margin-top: 39px;
+    @media(max-width: $mob) {
+      margin-top: 30px;
+    }
 	}
 
 	&__text {
@@ -891,6 +1138,9 @@ $font-Montserrat: 'Montserrat', sans-serif;
     font-weight: 300;
     line-height: 19px;
     letter-spacing: 0px;
+    @media(max-width: $mob) {
+      text-align: center;
+    }
 	}
 
 }
